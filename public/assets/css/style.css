@@ -1,0 +1,51 @@
+:root {
+    --c1-100: color-mix(in srgb, #56B34C 30%, #ffffff);
+    --c1-200: color-mix(in srgb, #56B34C 40%, #ffffff);
+    --c1-300: color-mix(in srgb, #56B34C 60%, #ffffff);
+    --c1-400: color-mix(in srgb, #56B34C 80%, #ffffff);
+    --c1-500: #56B34C;
+    --c1-600: color-mix(in srgb, #56B34C 80%, #000000);
+    --c1-700: color-mix(in srgb, #56B34C 60%, #000000);
+    --c1-800: color-mix(in srgb, #56B34C 40%, #000000);
+    --c1-900: color-mix(in srgb, #56B34C 30%, #000000);
+    --c2-100: color-mix(in srgb, #AC4985 30%, #ffffff);
+    --c2-200: color-mix(in srgb, #AC4985 40%, #ffffff);
+    --c2-300: color-mix(in srgb, #AC4985 60%, #ffffff);
+    --c2-400: color-mix(in srgb, #AC4985 80%, #ffffff);
+    --c2-500: #AC4985;
+    --c2-600: color-mix(in srgb, #AC4985 80%, #000000);
+    --c2-700: color-mix(in srgb, #AC4985 60%, #000000);
+    --c2-800: color-mix(in srgb, #AC4985 40%, #000000);
+    --c2-900: color-mix(in srgb, #AC4985 30%, #000000);
+    --c3-100: color-mix(in srgb, #DA935D 30%, #ffffff);
+    --c3-200: color-mix(in srgb, #DA935D 40%, #ffffff);
+    --c3-300: color-mix(in srgb, #DA935D 60%, #ffffff);
+    --c3-400: color-mix(in srgb, #DA935D 80%, #ffffff);
+    --c3-500: #DA935D;
+    --c3-600: color-mix(in srgb, #DA935D 80%, #000000);
+    --c3-700: color-mix(in srgb, #DA935D 60%, #000000);
+    --c3-800: color-mix(in srgb, #DA935D 40%, #000000);
+    --c3-900: color-mix(in srgb, #DA935D 30%, #000000);
+    --c4-100: color-mix(in srgb, #D75B61 30%, #ffffff);
+    --c4-200: color-mix(in srgb, #D75B61 40%, #ffffff);
+    --c4-300: color-mix(in srgb, #D75B61 60%, #ffffff);
+    --c4-400: color-mix(in srgb, #D75B61 80%, #ffffff);
+    --c4-500: #D75B61;
+    --c4-600: color-mix(in srgb, #D75B61 80%, #000000);
+    --c4-700: color-mix(in srgb, #D75B61 60%, #000000);
+    --c4-800: color-mix(in srgb, #D75B61 40%, #000000);
+    --c4-900: color-mix(in srgb, #D75B61 30%, #000000);
+    --c5-100: color-mix(in srgb, #3B82F6 30%, #ffffff);
+    --c5-200: color-mix(in srgb, #3B82F6 40%, #ffffff);
+    --c5-300: color-mix(in srgb, #3B82F6 60%, #ffffff);
+    --c5-400: color-mix(in srgb, #3B82F6 80%, #ffffff);
+    --c5-500: #3B82F6;
+    --c5-600: color-mix(in srgb, #3B82F6 80%, #000000);
+    --c5-700: color-mix(in srgb, #3B82F6 60%, #000000);
+    --c5-800: color-mix(in srgb, #3B82F6 40%, #000000);
+    --c5-900: color-mix(in srgb, #3B82F6 30%, #000000);
+}
+
+h1 {
+    color: var(--c1-400);
+}

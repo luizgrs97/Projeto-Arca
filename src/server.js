@@ -2,12 +2,15 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
+const { writeColorsCss } = require('./helpers/colors');
 
 const viewsPath = path.join(__dirname, 'views');
 const publicPath = path.join(__dirname, '..', 'public');
 const lastPageCookieName = 'arca_last_page';
 const fallbackPage = 'home';
 const port = process.env.PORT || 3001;
+
+writeColorsCss();
 
 app.set('view engine', 'ejs');
 
