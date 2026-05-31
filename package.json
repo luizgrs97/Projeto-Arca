@@ -6,7 +6,7 @@
     "start": "node src/server.js",
     "dev:server": "nodemon --watch . -e js src/server.js",
     "dev:watch": "browser-sync start --proxy localhost:3001 --no-notify --files 'src/**/*.ejs, public/**/*.css, public/**/*.js'",
-    "dev": "npm-run-all --parallel dev:server dev:watch"
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation npm-run-all --parallel dev:server dev:watch"
   },
   "dependencies": {
     "ejs": "^6.0.1",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.14",
     "npm-run-all": "^4.1.5"
   }
