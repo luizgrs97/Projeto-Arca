@@ -7,6 +7,7 @@ const viewsPath = path.join(__dirname, 'views');
 const publicPath = path.join(__dirname, '..', 'public');
 const lastPageCookieName = 'arca_last_page';
 const fallbackPage = 'home';
+const port = process.env.PORT || 3001;
 
 app.set('view engine', 'ejs');
 
@@ -73,6 +74,6 @@ app.get('/:page', (req, res, next) => {
     return res.render(page);
 });
 
-app.listen(3001, () => {
-    console.log('Servidor rodando em http://localhost:3001');
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
