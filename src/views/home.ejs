@@ -3,7 +3,97 @@
 <head>
     <%- include('partials/head', { title: 'ARCA' }) %>
 </head>
-<body>
-    <h1>Bem-vindo ao Projeto ARCA!</h1>
+<body class="home-page">
+    <%- include('partials/header') %>
+
+    <main class="home-shell">
+        <section class="hero-panel" aria-labelledby="home-title">
+            <div class="hero-copy">
+                <h1 id="home-title" class="hero-title">
+                    Juntos salvamos
+                    <span>vidas todos os dias</span>
+                </h1>
+                <p class="hero-text">Resgate, adote, cuide e transforme o futuro de um animal que precisa de você.</p>
+                <a class="primary-action" href="/resgatar-animal">
+                    <span class="material-symbols-outlined" aria-hidden="true">pets</span>
+                    Faça a diferença
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-actions" aria-label="Ações principais">
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">pets</span>
+                </div>
+                <div class="feature-content">
+                    <h2>Resgatar Animal</h2>
+                    <p>Solicite um resgate de animais feridos.</p>
+                    <a class="card-button" href="/resgatar-animal">
+                        Resgatar Animal
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">favorite</span>
+                </div>
+                <div class="feature-content">
+                    <h2>Adotar Animal</h2>
+                    <p>Veja cães e gatos disponíveis para adoção.</p>
+                    <a class="card-button" href="/adotar-animal">
+                        Adotar Animal
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <section class="support-actions" aria-label="Serviços">
+            <article class="service-card is-negative">
+                <div class="service-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">report_problem</span>
+                </div>
+                <div class="service-content">
+                    <h2>Denunciar Maus-Tratos</h2>
+                    <p>Denuncie casos de abuso e negligência.</p>
+                    <a class="outline-button" href="/denunciar">
+                        Denunciar
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card is-confirmation">
+                <div class="service-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">history</span>
+                </div>
+                <div class="service-content">
+                    <h2>Histórico</h2>
+                    <p>Veja suas solicitações, adoções e castrações anteriores.</p>
+                    <a class="outline-button" href="/historico">
+                        Visualizar
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card is-alert">
+                <div class="service-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+                <div class="service-content">
+                    <h2>Agendar Castração</h2>
+                    <p>Agende a castração gratuita do seu animal.</p>
+                    <a class="outline-button" href="/agendar-castracao">
+                        Agendar
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

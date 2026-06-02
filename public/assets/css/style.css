@@ -1,51 +1,569 @@
 :root {
-    --c1-100: color-mix(in srgb, #56B34C 30%, #ffffff);
-    --c1-200: color-mix(in srgb, #56B34C 40%, #ffffff);
-    --c1-300: color-mix(in srgb, #56B34C 60%, #ffffff);
-    --c1-400: color-mix(in srgb, #56B34C 80%, #ffffff);
-    --c1-500: #56B34C;
-    --c1-600: color-mix(in srgb, #56B34C 80%, #000000);
-    --c1-700: color-mix(in srgb, #56B34C 60%, #000000);
-    --c1-800: color-mix(in srgb, #56B34C 40%, #000000);
-    --c1-900: color-mix(in srgb, #56B34C 30%, #000000);
-    --c2-100: color-mix(in srgb, #AC4985 30%, #ffffff);
-    --c2-200: color-mix(in srgb, #AC4985 40%, #ffffff);
-    --c2-300: color-mix(in srgb, #AC4985 60%, #ffffff);
-    --c2-400: color-mix(in srgb, #AC4985 80%, #ffffff);
-    --c2-500: #AC4985;
-    --c2-600: color-mix(in srgb, #AC4985 80%, #000000);
-    --c2-700: color-mix(in srgb, #AC4985 60%, #000000);
-    --c2-800: color-mix(in srgb, #AC4985 40%, #000000);
-    --c2-900: color-mix(in srgb, #AC4985 30%, #000000);
-    --c3-100: color-mix(in srgb, #DA935D 30%, #ffffff);
-    --c3-200: color-mix(in srgb, #DA935D 40%, #ffffff);
-    --c3-300: color-mix(in srgb, #DA935D 60%, #ffffff);
-    --c3-400: color-mix(in srgb, #DA935D 80%, #ffffff);
-    --c3-500: #DA935D;
-    --c3-600: color-mix(in srgb, #DA935D 80%, #000000);
-    --c3-700: color-mix(in srgb, #DA935D 60%, #000000);
-    --c3-800: color-mix(in srgb, #DA935D 40%, #000000);
-    --c3-900: color-mix(in srgb, #DA935D 30%, #000000);
-    --c4-100: color-mix(in srgb, #D75B61 30%, #ffffff);
-    --c4-200: color-mix(in srgb, #D75B61 40%, #ffffff);
-    --c4-300: color-mix(in srgb, #D75B61 60%, #ffffff);
-    --c4-400: color-mix(in srgb, #D75B61 80%, #ffffff);
-    --c4-500: #D75B61;
-    --c4-600: color-mix(in srgb, #D75B61 80%, #000000);
-    --c4-700: color-mix(in srgb, #D75B61 60%, #000000);
-    --c4-800: color-mix(in srgb, #D75B61 40%, #000000);
-    --c4-900: color-mix(in srgb, #D75B61 30%, #000000);
-    --c5-100: color-mix(in srgb, #3B82F6 30%, #ffffff);
-    --c5-200: color-mix(in srgb, #3B82F6 40%, #ffffff);
-    --c5-300: color-mix(in srgb, #3B82F6 60%, #ffffff);
-    --c5-400: color-mix(in srgb, #3B82F6 80%, #ffffff);
-    --c5-500: #3B82F6;
-    --c5-600: color-mix(in srgb, #3B82F6 80%, #000000);
-    --c5-700: color-mix(in srgb, #3B82F6 60%, #000000);
-    --c5-800: color-mix(in srgb, #3B82F6 40%, #000000);
-    --c5-900: color-mix(in srgb, #3B82F6 30%, #000000);
+    --c0-0: color-mix(in srgb, #989898 0%, #ffffff);
+    --c0-25: color-mix(in srgb, #989898 5%, #ffffff);
+    --c0-50: color-mix(in srgb, #989898 10%, #ffffff);
+    --c0-100: color-mix(in srgb, #989898 20%, #ffffff);
+    --c0-200: color-mix(in srgb, #989898 40%, #ffffff);
+    --c0-300: color-mix(in srgb, #989898 60%, #ffffff);
+    --c0-400: color-mix(in srgb, #989898 80%, #ffffff);
+    --c0-500: #989898;
+    --c0-600: color-mix(in srgb, #989898 80%, #000000);
+    --c0-700: color-mix(in srgb, #989898 60%, #000000);
+    --c0-800: color-mix(in srgb, #989898 40%, #000000);
+    --c0-900: color-mix(in srgb, #989898 20%, #000000);
+    --c0-950: color-mix(in srgb, #989898 10%, #000000);
+    --c0-975: color-mix(in srgb, #989898 5%, #000000);
+    --c0-1000: color-mix(in srgb, #989898 0%, #000000);
+    --c1-0: color-mix(in srgb, #84E050 0%, #ffffff);
+    --c1-25: color-mix(in srgb, #84E050 5%, #ffffff);
+    --c1-50: color-mix(in srgb, #84E050 10%, #ffffff);
+    --c1-100: color-mix(in srgb, #84E050 20%, #ffffff);
+    --c1-200: color-mix(in srgb, #84E050 40%, #ffffff);
+    --c1-300: color-mix(in srgb, #84E050 60%, #ffffff);
+    --c1-400: color-mix(in srgb, #84E050 80%, #ffffff);
+    --c1-500: #84E050;
+    --c1-600: color-mix(in srgb, #84E050 80%, #000000);
+    --c1-700: color-mix(in srgb, #84E050 60%, #000000);
+    --c1-800: color-mix(in srgb, #84E050 40%, #000000);
+    --c1-900: color-mix(in srgb, #84E050 20%, #000000);
+    --c1-950: color-mix(in srgb, #84E050 10%, #000000);
+    --c1-975: color-mix(in srgb, #84E050 5%, #000000);
+    --c1-1000: color-mix(in srgb, #84E050 0%, #000000);
+    --c2-0: color-mix(in srgb, #E05084 0%, #ffffff);
+    --c2-25: color-mix(in srgb, #E05084 5%, #ffffff);
+    --c2-50: color-mix(in srgb, #E05084 10%, #ffffff);
+    --c2-100: color-mix(in srgb, #E05084 20%, #ffffff);
+    --c2-200: color-mix(in srgb, #E05084 40%, #ffffff);
+    --c2-300: color-mix(in srgb, #E05084 60%, #ffffff);
+    --c2-400: color-mix(in srgb, #E05084 80%, #ffffff);
+    --c2-500: #E05084;
+    --c2-600: color-mix(in srgb, #E05084 80%, #000000);
+    --c2-700: color-mix(in srgb, #E05084 60%, #000000);
+    --c2-800: color-mix(in srgb, #E05084 40%, #000000);
+    --c2-900: color-mix(in srgb, #E05084 20%, #000000);
+    --c2-950: color-mix(in srgb, #E05084 10%, #000000);
+    --c2-975: color-mix(in srgb, #E05084 5%, #000000);
+    --c2-1000: color-mix(in srgb, #E05084 0%, #000000);
+    --c3-0: color-mix(in srgb, #E0AC50 0%, #ffffff);
+    --c3-25: color-mix(in srgb, #E0AC50 5%, #ffffff);
+    --c3-50: color-mix(in srgb, #E0AC50 10%, #ffffff);
+    --c3-100: color-mix(in srgb, #E0AC50 20%, #ffffff);
+    --c3-200: color-mix(in srgb, #E0AC50 40%, #ffffff);
+    --c3-300: color-mix(in srgb, #E0AC50 60%, #ffffff);
+    --c3-400: color-mix(in srgb, #E0AC50 80%, #ffffff);
+    --c3-500: #E0AC50;
+    --c3-600: color-mix(in srgb, #E0AC50 80%, #000000);
+    --c3-700: color-mix(in srgb, #E0AC50 60%, #000000);
+    --c3-800: color-mix(in srgb, #E0AC50 40%, #000000);
+    --c3-900: color-mix(in srgb, #E0AC50 20%, #000000);
+    --c3-950: color-mix(in srgb, #E0AC50 10%, #000000);
+    --c3-975: color-mix(in srgb, #E0AC50 5%, #000000);
+    --c3-1000: color-mix(in srgb, #E0AC50 0%, #000000);
+    --c6-0: color-mix(in srgb, #50E064 0%, #ffffff);
+    --c6-25: color-mix(in srgb, #50E064 5%, #ffffff);
+    --c6-50: color-mix(in srgb, #50E064 10%, #ffffff);
+    --c6-100: color-mix(in srgb, #50E064 20%, #ffffff);
+    --c6-200: color-mix(in srgb, #50E064 40%, #ffffff);
+    --c6-300: color-mix(in srgb, #50E064 60%, #ffffff);
+    --c6-400: color-mix(in srgb, #50E064 80%, #ffffff);
+    --c6-500: #50E064;
+    --c6-600: color-mix(in srgb, #50E064 80%, #000000);
+    --c6-700: color-mix(in srgb, #50E064 60%, #000000);
+    --c6-800: color-mix(in srgb, #50E064 40%, #000000);
+    --c6-900: color-mix(in srgb, #50E064 20%, #000000);
+    --c6-950: color-mix(in srgb, #50E064 10%, #000000);
+    --c6-975: color-mix(in srgb, #50E064 5%, #000000);
+    --c6-1000: color-mix(in srgb, #50E064 0%, #000000);
+    --c7-0: color-mix(in srgb, #E06450 0%, #ffffff);
+    --c7-25: color-mix(in srgb, #E06450 5%, #ffffff);
+    --c7-50: color-mix(in srgb, #E06450 10%, #ffffff);
+    --c7-100: color-mix(in srgb, #E06450 20%, #ffffff);
+    --c7-200: color-mix(in srgb, #E06450 40%, #ffffff);
+    --c7-300: color-mix(in srgb, #E06450 60%, #ffffff);
+    --c7-400: color-mix(in srgb, #E06450 80%, #ffffff);
+    --c7-500: #E06450;
+    --c7-600: color-mix(in srgb, #E06450 80%, #000000);
+    --c7-700: color-mix(in srgb, #E06450 60%, #000000);
+    --c7-800: color-mix(in srgb, #E06450 40%, #000000);
+    --c7-900: color-mix(in srgb, #E06450 20%, #000000);
+    --c7-950: color-mix(in srgb, #E06450 10%, #000000);
+    --c7-975: color-mix(in srgb, #E06450 5%, #000000);
+    --c7-1000: color-mix(in srgb, #E06450 0%, #000000);
+    --c8-0: color-mix(in srgb, #e0d050 0%, #ffffff);
+    --c8-25: color-mix(in srgb, #e0d050 5%, #ffffff);
+    --c8-50: color-mix(in srgb, #e0d050 10%, #ffffff);
+    --c8-100: color-mix(in srgb, #e0d050 20%, #ffffff);
+    --c8-200: color-mix(in srgb, #e0d050 40%, #ffffff);
+    --c8-300: color-mix(in srgb, #e0d050 60%, #ffffff);
+    --c8-400: color-mix(in srgb, #e0d050 80%, #ffffff);
+    --c8-500: #e0d050;
+    --c8-600: color-mix(in srgb, #e0d050 80%, #000000);
+    --c8-700: color-mix(in srgb, #e0d050 60%, #000000);
+    --c8-800: color-mix(in srgb, #e0d050 40%, #000000);
+    --c8-900: color-mix(in srgb, #e0d050 20%, #000000);
+    --c8-950: color-mix(in srgb, #e0d050 10%, #000000);
+    --c8-975: color-mix(in srgb, #e0d050 5%, #000000);
+    --c8-1000: color-mix(in srgb, #e0d050 0%, #000000);
+    --c9-0: color-mix(in srgb, #5084E0 0%, #ffffff);
+    --c9-25: color-mix(in srgb, #5084E0 5%, #ffffff);
+    --c9-50: color-mix(in srgb, #5084E0 10%, #ffffff);
+    --c9-100: color-mix(in srgb, #5084E0 20%, #ffffff);
+    --c9-200: color-mix(in srgb, #5084E0 40%, #ffffff);
+    --c9-300: color-mix(in srgb, #5084E0 60%, #ffffff);
+    --c9-400: color-mix(in srgb, #5084E0 80%, #ffffff);
+    --c9-500: #5084E0;
+    --c9-600: color-mix(in srgb, #5084E0 80%, #000000);
+    --c9-700: color-mix(in srgb, #5084E0 60%, #000000);
+    --c9-800: color-mix(in srgb, #5084E0 40%, #000000);
+    --c9-900: color-mix(in srgb, #5084E0 20%, #000000);
+    --c9-950: color-mix(in srgb, #5084E0 10%, #000000);
+    --c9-975: color-mix(in srgb, #5084E0 5%, #000000);
+    --c9-1000: color-mix(in srgb, #5084E0 0%, #000000);
 }
 
-h1 {
-    color: var(--c1-600);
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--c3-25);
+    color: var(--c0-950);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: nowrap;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.home-page {
+    padding: 20px 22px 64px;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 64px;
+    width: 100%;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: var(--c1-700);
+    color: var(--c0-0);
+    box-shadow: 0 12px 26px color-mix(in srgb, var(--c1-900) 16%, transparent);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 210px;
+    font-weight: 800;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    aspect-ratio: 1;
+    color: var(--c0-0);
+}
+
+.brand-mark.material-symbols-outlined {
+    font-size: 42px;
+}
+
+.brand-copy {
+    display: grid;
+    gap: 2px;
+    line-height: 1;
+}
+
+.brand-copy strong {
+    font-size: 1.55rem;
+}
+
+.brand-copy small {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.86;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-left: auto;
+    font-size: 1.22rem;
+    font-weight: 800;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    white-space: nowrap;
+}
+
+.nav-link:not(:first-child) {
+    padding-left: 18px;
+    border-left: 2px solid color-mix(in srgb, var(--c0-0) 75%, transparent);
+}
+
+.nav-link .material-symbols-outlined {
+    font-size: 28px;
+    flex: 0 0 auto;
+}
+
+.header-tools {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-button {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    aspect-ratio: 1;
+    border-radius: 999px;
+}
+
+.icon-button .material-symbols-outlined {
+    font-size: 29px;
+}
+
+.nav-link:focus-visible,
+.icon-button:focus-visible,
+.brand:focus-visible,
+.primary-action:focus-visible,
+.card-button:focus-visible,
+.outline-button:focus-visible {
+    outline: 3px solid var(--c9-500);
+    outline-offset: 4px;
+}
+
+.home-shell {
+    width: min(1180px, 100%);
+    margin: 150px auto 0;
+}
+
+.hero-panel {
+    min-height: 282px;
+    padding: 48px 64px;
+    border: 1px solid var(--c3-200);
+    border-radius: 26px;
+    background: var(--c3-25);
+    box-shadow: 0 18px 40px color-mix(in srgb, var(--c3-500) 9%, transparent);
+}
+
+.hero-copy {
+    width: min(430px, 100%);
+}
+
+.hero-title {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    color: var(--c1-950);
+    font-size: 2.25rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.hero-title span {
+    color: var(--c2-500);
+}
+
+.hero-text {
+    max-width: 390px;
+    margin: 8px 0 22px;
+    color: var(--c0-950);
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.primary-action,
+.card-button,
+.outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 44px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.primary-action {
+    padding: 0 26px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--c1-600), var(--c1-800));
+    color: var(--c0-0);
+    box-shadow: 0 10px 22px color-mix(in srgb, var(--c1-900) 22%, transparent);
+}
+
+.primary-action .material-symbols-outlined {
+    font-size: 25px;
+}
+
+.featured-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.feature-card {
+    display: grid;
+    grid-template-columns: 156px minmax(0, 1fr);
+    align-items: center;
+    gap: 28px;
+    min-height: 186px;
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--c1-600), var(--c1-900));
+    color: var(--c0-0);
+    box-shadow: 0 16px 32px color-mix(in srgb, var(--c1-900) 18%, transparent);
+}
+
+.feature-icon {
+    display: grid;
+    place-items: center;
+    width: 126px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--c0-0);
+    color: var(--c1-700);
+    box-shadow: 0 8px 16px color-mix(in srgb, var(--c0-1000) 28%, transparent);
+}
+
+.feature-icon .material-symbols-outlined {
+    font-size: 74px;
+}
+
+.feature-content h2,
+.service-content h2 {
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.feature-content h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.feature-content p {
+    margin: 14px 0 28px;
+    color: color-mix(in srgb, var(--c0-0) 82%, transparent);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.card-button {
+    min-width: 180px;
+    padding: 0 18px;
+    background: var(--c0-0);
+    color: var(--c1-900);
+}
+
+.card-button .material-symbols-outlined,
+.outline-button .material-symbols-outlined {
+    color: var(--c9-700);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.support-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.service-card {
+    display: grid;
+    grid-template-columns: 102px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    min-height: 170px;
+    padding: 24px 28px 24px 18px;
+    border: 1px solid var(--c3-200);
+    border-radius: 24px;
+    background: var(--c3-25);
+}
+
+.service-icon {
+    display: grid;
+    place-items: center;
+    width: 88px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.service-icon .material-symbols-outlined {
+    font-size: 56px;
+}
+
+.service-card.is-negative .service-icon {
+    background: var(--c7-100);
+    color: var(--c7-800);
+}
+
+.service-card.is-confirmation .service-icon {
+    background: var(--c6-100);
+    color: var(--c6-800);
+}
+
+.service-card.is-alert .service-icon {
+    background: var(--c8-100);
+    color: var(--c7-800);
+}
+
+.service-content h2 {
+    color: var(--c1-950);
+    font-size: 1.32rem;
+    line-height: 1.15;
+}
+
+.service-content p {
+    margin: 12px 0 18px;
+    color: var(--c0-900);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.outline-button {
+    min-width: 136px;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 2px solid var(--c1-900);
+    background: transparent;
+    color: var(--c1-900);
+}
+
+@media (max-width: 1060px) {
+    .site-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border-radius: 24px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0;
+        overflow-x: auto;
+        padding-top: 4px;
+    }
+
+    .header-tools {
+        margin-left: auto;
+    }
+
+    .home-shell {
+        margin-top: 72px;
+    }
+
+    .featured-actions,
+    .support-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .home-page {
+        padding: 12px 12px 40px;
+    }
+
+    .site-header {
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .brand {
+        min-width: 0;
+    }
+
+    .brand-copy strong {
+        font-size: 1.25rem;
+    }
+
+    .main-nav {
+        gap: 12px;
+        font-size: 1rem;
+    }
+
+    .nav-link:not(:first-child) {
+        padding-left: 12px;
+    }
+
+    .hero-panel {
+        min-height: 0;
+        padding: 32px 24px;
+        border-radius: 18px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .feature-card,
+    .service-card {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        border-radius: 18px;
+    }
+
+    .feature-content h2 {
+        font-size: 1.65rem;
+    }
+
+    .feature-icon {
+        width: 96px;
+    }
+
+    .feature-icon .material-symbols-outlined {
+        font-size: 58px;
+    }
+
+    .service-icon {
+        width: 76px;
+    }
 }

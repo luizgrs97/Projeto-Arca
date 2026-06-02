@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev:server": "nodemon --watch . -e js src/server.js",
-    "dev:watch": "browser-sync start --proxy localhost:3001 --no-notify --files 'src/**/*.ejs, public/**/*.css, public/**/*.js'",
+    "dev:watch": "browser-sync start --proxy localhost:3001 --no-notify --logLevel debug --reload-debounce 1 --files 'src/**/*.ejs, public/**/*.css, public/**/*.js'",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation npm-run-all --parallel dev:server dev:watch"
   },
   "dependencies": {

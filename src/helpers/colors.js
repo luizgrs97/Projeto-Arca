@@ -2,18 +2,24 @@ const fs = require('fs');
 const path = require('path');
 
 const baseColors = {
-    c1: '#56B34C',
-    c2: '#AC4985',
-    c3: '#DA935D',
-    c4: '#D75B61',
-    c5: '#3B82F6',
+    c0: '#989898',
+    c1: '#84E050',
+    c2: '#E05084',
+    c3: '#E0AC50',
+    c6: '#50E064',
+    c7: '#E06450',
+    c8: '#e0d050',
+    c9: '#5084E0',
 };
 
 const defaultTargetPath = path.join(__dirname, '..', '..', 'public', 'assets', 'css', 'style.css');
 
 function buildColorVariables(colors = baseColors) {
     const colorSteps = [
-        ['100', (hex) => `color-mix(in srgb, ${hex} 30%, #ffffff)`],
+        ['0', (hex) => `color-mix(in srgb, ${hex} 0%, #ffffff)`],
+        ['25', (hex) => `color-mix(in srgb, ${hex} 5%, #ffffff)`],
+        ['50', (hex) => `color-mix(in srgb, ${hex} 10%, #ffffff)`],
+        ['100', (hex) => `color-mix(in srgb, ${hex} 20%, #ffffff)`],
         ['200', (hex) => `color-mix(in srgb, ${hex} 40%, #ffffff)`],
         ['300', (hex) => `color-mix(in srgb, ${hex} 60%, #ffffff)`],
         ['400', (hex) => `color-mix(in srgb, ${hex} 80%, #ffffff)`],
@@ -21,7 +27,10 @@ function buildColorVariables(colors = baseColors) {
         ['600', (hex) => `color-mix(in srgb, ${hex} 80%, #000000)`],
         ['700', (hex) => `color-mix(in srgb, ${hex} 60%, #000000)`],
         ['800', (hex) => `color-mix(in srgb, ${hex} 40%, #000000)`],
-        ['900', (hex) => `color-mix(in srgb, ${hex} 30%, #000000)`],
+        ['900', (hex) => `color-mix(in srgb, ${hex} 20%, #000000)`],
+        ['950', (hex) => `color-mix(in srgb, ${hex} 10%, #000000)`],
+        ['975', (hex) => `color-mix(in srgb, ${hex} 5%, #000000)`],
+        ['1000', (hex) => `color-mix(in srgb, ${hex} 0%, #000000)`],
     ];
 
     const variables = Object.entries(colors).flatMap(([name, hex]) => {
