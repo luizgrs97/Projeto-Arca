@@ -133,8 +133,8 @@ body {
     min-height: 100vh;
     margin: 0;
     background: var(--c3-25);
-    color: var(--c0-950);
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--c0-800);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     letter-spacing: 0;
 }
 
@@ -292,11 +292,11 @@ a {
 
 .hero-title {
     display: grid;
-    gap: 8px;
+    gap: 0;
     margin: 0;
-    color: var(--c1-950);
+    color: var(--c1-800);
     font-size: 2.25rem;
-    line-height: 1.1;
+    line-height: 1.05;
     letter-spacing: 0;
 }
 
@@ -307,7 +307,6 @@ a {
 .hero-text {
     max-width: 390px;
     margin: 8px 0 22px;
-    color: var(--c0-950);
     font-size: 1.05rem;
     font-weight: 800;
     line-height: 1.35;
@@ -398,12 +397,17 @@ a {
     min-width: 180px;
     padding: 0 18px;
     background: var(--c0-0);
-    color: var(--c1-900);
+    color: var(--c1-800);
 }
 
-.card-button .material-symbols-outlined,
-.outline-button .material-symbols-outlined {
+.card-button .material-symbols-outlined {
     color: var(--c9-700);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.outline-button .material-symbols-outlined {
+    color: var(--c1-800);
     font-size: 2rem;
     line-height: 1;
 }
@@ -455,14 +459,13 @@ a {
 }
 
 .service-content h2 {
-    color: var(--c1-950);
+    color: var(--c1-800);
     font-size: 1.32rem;
     line-height: 1.15;
 }
 
 .service-content p {
     margin: 12px 0 18px;
-    color: var(--c0-900);
     font-size: 1rem;
     font-weight: 800;
     line-height: 1.3;
@@ -472,9 +475,9 @@ a {
     min-width: 136px;
     min-height: 40px;
     padding: 0 16px;
-    border: 2px solid var(--c1-900);
+    border: 2px solid var(--c1-800);
     background: transparent;
-    color: var(--c1-900);
+    color: var(--c1-800);
 }
 
 @media (max-width: 1060px) {
