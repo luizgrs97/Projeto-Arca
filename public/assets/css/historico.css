@@ -15,21 +15,6 @@ body {
     padding: 20px 22px 64px;
 }
 
-body::before {
-  position: fixed;
-  font-size: 160px;
-  color: rgba(104, 170, 69, 0.08);
-  left: -30px;
-  bottom: 30px;
-}
-
-body::after {
-  position: fixed;
-  font-size: 130px;
-  color: rgba(229, 118, 157, 0.12);
-  right: 20px;
-  bottom: 40px;
-}
 
 main {
   width: 82%;

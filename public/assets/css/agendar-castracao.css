@@ -60,6 +60,7 @@ select {
     text-align: center;
     cursor: pointer;
     width: 120px;
+    
 }
 .animal-card input[type="radio"] {
   display: none;

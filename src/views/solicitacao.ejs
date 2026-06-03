@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head', { title: 'ARCA' }) %>
+    <link rel="stylesheet" href="/assets/css/solicitacao.css">
+</head>
+<body class="home-page">
+    <%- include('partials/header', { activePage: 'home' }) %>
+<main>
+  <a href="/historico" class="voltar">← Voltar</a>
+
+  <section class="titulo-area">
+    <h1>Acompanhar Solicitação</h1>
+    <p>Acompanhe o status da sua solicitação em tempo real e receba atualizações importantes.</p>
+  </section>
+
+  <section class="card-principal">
+    <div class="topo-card">
+      <div class="info-solicitacao">
+        <div class="icone">⌛</div>
+        <div>
+          <h2>Resgate de Cachorro Ferido</h2>
+          <p>Rua x, Centro</p>
+          <span>Solicitado em 12/04/2025 às 15:30</span>
+        </div>
+      </div>
+
+      <div class="busca">
+        <input type="text" placeholder="🔍 Buscar...">
+        <button>Filtrar</button>
+      </div>
+    </div>
+
+    <div class="progresso">
+      <div class="linha"></div>
+
+      <div class="etapa ativa">
+        <span></span>
+        <p>Pedido Recebido</p>
+      </div>
+
+      <div class="etapa atual">
+        <span></span>
+        <p>Analisando situação</p>
+      </div>
+
+      <div class="etapa">
+        <span></span>
+        <p>Resgate Concluído</p>
+      </div>
+    </div>
+
+    <div class="mensagem">
+      <p>Por favor, aguarde enquanto nossa equipe chega ao local.</p>
+      <button>💬 Entrar em Contato</button>
+    </div>
+
+    <div class="atualizacoes">
+      <h3>Atualizações da Solicitação:</h3>
+
+      <div class="grid">
+        <div class="animal-card">
+          <div class="foto">🐶</div>
+          <div>
+            <h4>Rex</h4>
+            <p>Cachorro, Médio, 2 Anos</p>
+            <span>Solicitação de Castração</span>
+          </div>
+          <button>Ver Status</button>
+        </div>
+
+        <div class="animal-card">
+          <div class="foto">🐕</div>
+          <div>
+            <h4>Thomas</h4>
+            <p>Cachorro, Grande, 4 Anos</p>
+            <span>Solicitação de Castração</span>
+          </div>
+          <button>Ver Status</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="botoes-finais">
+      <button class="cancelar">Cancelar</button>
+      <button class="solicitar">Solicitar Resgate</button>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

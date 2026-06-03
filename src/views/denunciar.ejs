@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head', { title: 'ARCA' }) %>
+    <link rel="stylesheet" href="/assets/css/denunciar.css">
+</head>
+<body>
+
+  <main class="page">
+    <%- include('partials/header', { activePage: 'home' }) %>
+
+    <section class="content">
+      <a class="back" href="/home">← Voltar</a>
+
+      <div class="title-area">
+        <div>
+          <h1>Denunciar Maus-Tratos</h1>
+          <p>
+            Relate um caso de maus-tratos para que nossa equipe possa investigar<br>
+            e tomar as providências necessárias.
+          </p>
+        </div>
+
+        <button class="warning"><span class="material-symbols-outlined">warning</span> Emergência? Solicite o resgate imediato</button>
+      </div>
+
+      <form class="card">
+
+        <div class="grid">
+          <section class="box">
+            <h3><span class="material-symbols-outlined">location_on</span> Localização do Animal</h3>
+
+            <div class="location-area">
+              <div class="pin"><span class="material-symbols-outlined">location_on</span></div>
+              <button type="button" class="pink-btn">Selecionar localização</button>
+            </div>
+          </section>
+
+          <section class="box">
+            <h3><span class="material-symbols-outlined">image</span> Fotos do Animal</h3>
+
+            <div class="photos">
+              <label class="animal-upload" for="imagem-animal">
+                        <input id="imagem-animal" name="imagemAnimal" type="file" accept="image/png,image/jpeg" required>
+                        <span class="material-symbols-outlined">add_photo_alternate</span>
+                        <strong>Envie uma imagem do animal<span class="required-mark">*</span></strong>
+                        <small>Formatos aceitos: JPG, PNG. Máx. 5MB.</small>
+            </div>
+
+          </section>
+
+          <section class="box description-box">
+            <h3><span class="material-symbols-outlined">description</span> Descrição</h3>
+
+            <label>Descreva o que está acontecendo com o animal</label>
+            <textarea></textarea>
+
+            <label class="check">
+              <input type="checkbox" checked>
+              Declaro que as informações fornecidas são verdadeiras
+            </label>
+          </section>
+
+          <section class="box contact-box">
+            <h3><span class="material-symbols-outlined">person</span> Seus Dados de Contato</h3>
+
+            <label>Nome</label>
+            <input type="text" placeholder="Digite seu nome">
+
+            <label>E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail">
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000">
+          </section>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="cancel"><span class="material-symbols-outlined">close</span> Cancelar</button>
+          <button type="submit" class="submit"><span class="material-symbols-outlined">pets</span> Solicitar Resgate</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

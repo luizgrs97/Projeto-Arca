@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff3e4, #ffeaf1);
+  color: #333;
+}
+
+.home-page {
+    padding: 20px 22px 64px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  width: 82%;
+  max-width: 1000px;
+  margin: 25px auto;
+}
+
+.voltar {
+  color: #4a9b32;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.titulo-area h1 {
+  font-size: 38px;
+  margin-top: 12px;
+}
+
+.titulo-area p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.card-principal {
+  margin-top: 24px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.topo-card {
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.info-solicitacao {
+  display: flex;
+  gap: 16px;
+}
+
+.icone {
+  width: 55px;
+  height: 55px;
+  background: #ffe4ee;
+  color: #e95b97;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.info-solicitacao h2 {
+  font-size: 22px;
+}
+
+.info-solicitacao p,
+.info-solicitacao span {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.busca {
+  display: flex;
+  gap: 12px;
+}
+
+.busca input {
+  width: 190px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.busca button,
+.solicitar {
+  background: #63b246;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.progresso {
+  position: relative;
+  margin: 18px 50px 30px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.linha {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #d1d1d1;
+}
+
+.linha::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #e95b97, #63b246);
+}
+
+.etapa {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.etapa span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 5px auto 15px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #c7c7c7;
+}
+
+.etapa.ativa span {
+  background: #e95b97;
+  border-color: #e95b97;
+}
+
+.etapa.atual span {
+  background: #63b246;
+  border-color: #63b246;
+}
+
+.etapa p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.etapa.ativa p {
+  color: #e95b97;
+}
+
+.etapa.atual p {
+  color: #4a9b32;
+}
+
+.mensagem {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mensagem button {
+  border: 1px solid #63b246;
+  color: #4a9b32;
+  background: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.atualizacoes {
+  padding: 22px 28px;
+}
+
+.atualizacoes h3 {
+  color: #4a9b32;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.animal-card {
+  position: relative;
+  min-height: 135px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 95px 1fr;
+  gap: 18px;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.14);
+}
+
+.foto {
+  width: 95px;
+  height: 95px;
+  background: #eef5e9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.animal-card h4 {
+  font-size: 20px;
+}
+
+.animal-card p,
+.animal-card span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.animal-card button {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  background: #e95b97;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botoes-finais {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  padding: 18px 28px;
+  background: #fffaf5;
+}
+
+.cancelar {
+  background: #e95b97;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+  main {
+    width: 92%;
+  }
+
+  .topo-card,
+  .mensagem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .busca {
+    width: 100%;
+  }
+
+  .busca input {
+    width: 100%;
+  }
+}
