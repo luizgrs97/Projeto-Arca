@@ -8,22 +8,22 @@
     </a>
 
     <nav class="main-nav" aria-label="Navegação principal">
-        <a class="nav-link is-active" href="/home">
+        <a class="nav-link <%= typeof activePage !== 'undefined' && activePage === 'home' ? 'is-active' : '' %>" href="/home">
             <span class="material-symbols-outlined" aria-hidden="true">home</span>
             Home
         </a>
-        <a class="nav-link" href="/duvidas">
+        <a class="nav-link <%= typeof activePage !== 'undefined' && activePage === 'duvidas' ? 'is-active' : '' %>" href="/duvidas">
             <span class="material-symbols-outlined" aria-hidden="true">help</span>
             Dúvidas
         </a>
-        <a class="nav-link" href="/contato">
+        <a class="nav-link <%= typeof activePage !== 'undefined' && activePage === 'contato' ? 'is-active' : '' %>" href="/contato">
             <span class="material-symbols-outlined" aria-hidden="true">mail</span>
             Contato
         </a>
     </nav>
 
     <div class="header-tools" aria-label="Ferramentas do usuário">
-        <a class="icon-button" href="/perfil" aria-label="Perfil">
+        <a class="icon-button" href="/login" aria-label="Entrar">
             <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
         </a>
         <a class="icon-button" href="/notificacoes" aria-label="Notificações">

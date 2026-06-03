@@ -4,7 +4,7 @@
     <%- include('partials/head', { title: 'ARCA' }) %>
 </head>
 <body class="home-page">
-    <%- include('partials/header') %>
+    <%- include('partials/header', { activePage: 'home' }) %>
 
     <main class="home-shell">
         <section class="hero-panel" aria-labelledby="home-title">
@@ -14,7 +14,7 @@
                     <span>vidas todos os dias</span>
                 </h1>
                 <p class="hero-text">Resgate, adote, cuide e transforme o futuro de um animal que precisa de você.</p>
-                <a class="primary-action" href="/resgatar-animal">
+                <a class="primary-action" href="/adocao">
                     <span class="material-symbols-outlined" aria-hidden="true">pets</span>
                     Faça a diferença
                 </a>

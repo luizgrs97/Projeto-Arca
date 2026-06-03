@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head', { title: 'Criar conta | ARCA' }) %>
+</head>
+<body class="signup-page">
+    <%- include('partials/header', { activePage: 'cadastro' }) %>
+
+    <main class="signup-shell">
+        <a class="back-link" href="/login">
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+            Voltar
+        </a>
+
+        <header class="signup-heading">
+            <h1>Criar conta</h1>
+            <p>Cadastre-se para solicitar resgates, adotar animais e acompanhar seus serviços.</p>
+        </header>
+
+        <section class="signup-card" aria-labelledby="signup-title">
+            <h2 id="signup-title" class="sr-only">Formulário de cadastro</h2>
+
+            <form class="signup-form" action="/cadastro" method="post">
+                <div class="signup-grid">
+                    <div class="form-group">
+                        <label for="nome">Nome completo<span class="required-mark">*</span></label>
+                        <div class="input-control">
+                            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Digite seu nome completo" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail<span class="required-mark">*</span></label>
+                        <div class="input-control">
+                            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF<span class="required-mark">*</span></label>
+                        <div class="input-control">
+                            <span class="material-symbols-outlined" aria-hidden="true">badge</span>
+                            <input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone<span class="required-mark">*</span></label>
+                        <div class="input-control">
+                            <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+                            <input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento">Data de nascimento<span class="required-mark">*</span></label>
+                        <div class="input-control">
+                            <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                            <input id="nascimento" name="nascimento" type="text" inputmode="numeric" autocomplete="bday" placeholder="dd/mm/aaaa" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endereco">Endereço<span class="required-mark">*</span></label>
+                        <div class="input-control">
+                            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <input id="endereco" name="endereco" type="text" autocomplete="street-address" placeholder="Digite seu endereço completo" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha<span class="required-mark">*</span></label>
+                        <div class="input-control input-control-password">
+                            <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+                            <input id="senha" name="senha" type="password" autocomplete="new-password" placeholder="Crie uma senha segura" required>
+                            <button class="password-toggle compact-toggle" type="button" aria-label="Mostrar senha">
+                                <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmar senha<span class="required-mark">*</span></label>
+                        <div class="input-control input-control-password">
+                            <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+                            <input id="confirmar-senha" name="confirmarSenha" type="password" autocomplete="new-password" placeholder="Confirme sua senha" required>
+                            <button class="password-toggle compact-toggle" type="button" aria-label="Mostrar senha">
+                                <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="terms-control" for="termos">
+                    <input id="termos" name="termos" type="checkbox" required checked>
+                    <span class="checkbox-visual" aria-hidden="true">
+                        <span class="material-symbols-outlined">check</span>
+                    </span>
+                    <span>Eu li e concordo com os <a href="/termos">Termos de Uso</a> e a <a href="/privacidade">Política de Privacidade</a>.</span>
+                </label>
+
+                <button class="signup-primary-button" type="submit">Criar conta</button>
+
+                <p class="signup-login-link">
+                    Já tem uma conta?
+                    <a href="/login">
+                        Entrar
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

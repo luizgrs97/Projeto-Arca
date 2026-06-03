@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head', { title: 'Cadastrar Animal | ARCA' }) %>
+</head>
+<body class="animal-page">
+    <%- include('partials/header', { activePage: 'cadastrar-animal' }) %>
+
+    <main class="animal-shell">
+        <a class="back-link" href="/home">
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+            Voltar
+        </a>
+
+        <header class="animal-heading">
+            <h1>Cadastrar Animal</h1>
+            <p>Preencha os dados do animal para utilizar os serviços.</p>
+        </header>
+
+        <section class="animal-card" aria-labelledby="animal-title">
+            <h2 id="animal-title" class="sr-only">Formulário de cadastro do animal</h2>
+
+            <form class="animal-form" action="/cadastrar-animal" method="post" enctype="multipart/form-data">
+                <div class="form-group animal-field-full">
+                    <label for="nome-animal">Nome<span class="required-mark">*</span></label>
+                    <div class="input-control">
+                        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                        <input id="nome-animal" name="nomeAnimal" type="text" autocomplete="off" placeholder="Digite o nome do animal" required>
+                    </div>
+                </div>
+
+                <label class="animal-upload" for="imagem-animal">
+                    <input id="imagem-animal" name="imagemAnimal" type="file" accept="image/png,image/jpeg" required>
+                    <span class="material-symbols-outlined" aria-hidden="true">add_photo_alternate</span>
+                    <strong>Envie uma imagem do animal<span class="required-mark">*</span></strong>
+                    <small>Formatos aceitos: JPG, PNG. Máx. 5MB.</small>
+                </label>
+
+                <div class="animal-grid">
+                    <fieldset class="animal-choice-group">
+                        <legend>Espécie<span class="required-mark">*</span></legend>
+                        <div class="animal-choice-row">
+                            <label class="animal-choice">
+                                <input type="radio" name="especie" value="cao" required>
+                                <span class="choice-dot" aria-hidden="true"></span>
+                                <span class="material-symbols-outlined" aria-hidden="true">pets</span>
+                                Cão
+                            </label>
+                            <label class="animal-choice">
+                                <input type="radio" name="especie" value="gato">
+                                <span class="choice-dot" aria-hidden="true"></span>
+                                <span class="material-symbols-outlined" aria-hidden="true">pets</span>
+                                Gato
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="animal-choice-group">
+                        <legend>Sexo<span class="required-mark">*</span></legend>
+                        <div class="animal-choice-row">
+                            <label class="animal-choice">
+                                <input type="radio" name="sexo" value="macho" required>
+                                <span class="choice-dot" aria-hidden="true"></span>
+                                <span class="material-symbols-outlined" aria-hidden="true">male</span>
+                                Macho
+                            </label>
+                            <label class="animal-choice">
+                                <input type="radio" name="sexo" value="femea">
+                                <span class="choice-dot" aria-hidden="true"></span>
+                                <span class="material-symbols-outlined" aria-hidden="true">female</span>
+                                Fêmea
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="raca">Raça<span class="required-mark">*</span></label>
+                        <div class="select-control">
+                            <select id="raca" name="raca" required>
+                                <option value="">Selecione</option>
+                                <option value="sem-raca-definida">Sem raça definida</option>
+                                <option value="vira-lata">Vira-lata</option>
+                                <option value="siames">Siamês</option>
+                                <option value="labrador">Labrador</option>
+                                <option value="poodle">Poodle</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="temperamento">Temperamento<span class="required-mark">*</span></label>
+                        <div class="select-control">
+                            <select id="temperamento" name="temperamento" required>
+                                <option value="">Selecione</option>
+                                <option value="calmo">Calmo</option>
+                                <option value="brincalhao">Brincalhão</option>
+                                <option value="timido">Tímido</option>
+                                <option value="sociavel">Sociável</option>
+                                <option value="protetor">Protetor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade aproximada<span class="required-mark">*</span></label>
+                        <div class="select-control">
+                            <select id="idade" name="idade" required>
+                                <option value="">Selecione</option>
+                                <option value="filhote">Filhote</option>
+                                <option value="jovem">Jovem</option>
+                                <option value="adulto">Adulto</option>
+                                <option value="idoso">Idoso</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group animal-field-full">
+                    <label for="historico-saude">Histórico de saúde</label>
+                    <div class="textarea-control">
+                        <textarea id="historico-saude" name="historicoSaude" maxlength="1000" rows="4" placeholder="Informe vacinas, doenças prévias, tratamentos, alergias ou outras informações relevantes."></textarea>
+                    </div>
+                    <span class="textarea-counter">0/1000</span>
+                </div>
+
+                <div class="form-group animal-field-full">
+                    <label for="descricao-animal">Descrição</label>
+                    <div class="textarea-control">
+                        <textarea id="descricao-animal" name="descricaoAnimal" maxlength="1000" rows="4" placeholder="Dê uma breve descrição do animal, incluindo personalidade, comportamentos e curiosidades."></textarea>
+                    </div>
+                    <span class="textarea-counter">0/1000</span>
+                </div>
+
+                <button class="animal-primary-button" type="submit">Confirmar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
