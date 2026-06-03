@@ -299,6 +299,84 @@ a {
     font-size: 29px;
 }
 
+.profile-menu {
+    position: relative;
+    display: inline-flex;
+}
+
+.profile-button.is-open {
+    background: color-mix(in srgb, var(--c0-0) 18%, transparent);
+}
+
+.profile-popover {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 5;
+    display: grid;
+    gap: 4px;
+    min-width: 190px;
+    padding: 14px 16px;
+    border: 1px solid var(--color-surface-border);
+    border-radius: 14px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    box-shadow: var(--shadow-hero);
+}
+
+.profile-popover::before {
+    position: absolute;
+    top: -7px;
+    right: 14px;
+    width: 14px;
+    aspect-ratio: 1;
+    border-top: 1px solid var(--color-surface-border);
+    border-left: 1px solid var(--color-surface-border);
+    background: var(--color-surface);
+    content: "";
+    transform: rotate(45deg);
+}
+
+.profile-popover strong {
+    color: var(--color-brand);
+    font-size: 1.05rem;
+    text-transform: capitalize;
+}
+
+.profile-popover span,
+.profile-popover small {
+    font-weight: 700;
+}
+
+.profile-popover small {
+    color: var(--c0-600);
+}
+
+.profile-logout-form {
+    margin: 10px 0 0;
+}
+
+.profile-logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 38px;
+    border: 1px solid var(--c7-200);
+    border-radius: 10px;
+    background: var(--color-service-negative-background);
+    color: var(--color-service-negative-icon);
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.profile-logout-button .material-symbols-outlined {
+    font-size: 21px;
+}
+
 .nav-link:focus-visible,
 .icon-button:focus-visible,
 .brand:focus-visible,
@@ -516,7 +594,7 @@ a {
 
 .login-page {
     min-height: 100vh;
-    padding: 24px 24px 72px;
+    padding: 20px 22px 64px;
 }
 
 .login-shell {
@@ -585,6 +663,17 @@ a {
 .login-form {
     display: grid;
     gap: 18px;
+}
+
+.form-error {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--c7-200);
+    border-radius: 12px;
+    background: var(--color-service-negative-background);
+    color: var(--color-service-negative-icon);
+    font-size: 0.95rem;
+    font-weight: 800;
 }
 
 .form-group {
@@ -750,7 +839,7 @@ a {
 
 .signup-page {
     min-height: 100vh;
-    padding: 24px 24px 72px;
+    padding: 20px 22px 64px;
 }
 
 .signup-shell {
@@ -1307,18 +1396,18 @@ a {
     .animal-card {
         padding: 30px 22px;
         border-radius: 22px;
+        
+    ll {
+        margin-top: 48px;
     }
 
-    .animal-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+    .animal-heading h1 {
+        font-size: 2.2rem;
     }
 
-    .animal-choice-row {
-        flex-wrap: wrap;
+    .animal-card {
+        padding: 30px 22px;
+        border-radius: 22px;
     }
-
-    .animal-choice {
-        flex-basis: calc(50% - 5px);
     }
 }

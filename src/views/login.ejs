@@ -23,11 +23,15 @@
             </header>
 
             <form class="login-form" action="/login" method="post">
+                <% if (typeof authError !== 'undefined' && authError) { %>
+                    <p class="form-error" role="alert"><%= authError %></p>
+                <% } %>
+
                 <div class="form-group">
-                    <label for="email">E-mail</label>
+                    <label for="usuario">Usuário</label>
                     <div class="input-control">
-                        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required>
+                        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                        <input id="usuario" name="usuario" type="text" autocomplete="username" placeholder="tutor, candidato, ong ou prefeitura" value="<%= typeof loginUsername !== 'undefined' ? loginUsername : '' %>" required>
                     </div>
                 </div>
 
