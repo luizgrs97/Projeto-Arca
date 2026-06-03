@@ -4,6 +4,15 @@
     <%- include('partials/head', { title: 'ARCA' }) %>
 </head>
 <body class="home-page">
+    <%
+    const isOngUser = typeof currentUser !== 'undefined' && currentUser?.role === 'ong';
+    const adoptionAction = {
+        title: isOngUser ? 'Cadastrar adoção' : 'Adotar Animal',
+        description: isOngUser ? 'Insira a descrição de animais para adoção.' : 'Veja cães e gatos disponíveis para adoção.',
+        button: isOngUser ? 'Cadastrar adoção' : 'Adotar Animal',
+        href: isOngUser ? '/cadastrar-animal' : '/adotar-animal',
+    };
+    %>
     <%- include('partials/header', { activePage: 'home' }) %>
 
     <main class="home-shell">
@@ -41,10 +50,10 @@
                     <span class="material-symbols-outlined">favorite</span>
                 </div>
                 <div class="feature-content">
-                    <h2>Adotar Animal</h2>
-                    <p>Veja cães e gatos disponíveis para adoção.</p>
-                    <a class="card-button" href="/adocao">
-                        Adotar Animal
+                    <h2><%= adoptionAction.title %></h2>
+                    <p><%= adoptionAction.description %></p>
+                    <a class="card-button" href="<%= adoptionAction.href %>">
+                        <%= adoptionAction.button %>
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                     </a>
                 </div>

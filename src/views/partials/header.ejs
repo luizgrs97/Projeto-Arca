@@ -1,3 +1,9 @@
+<%
+const user = typeof currentUser !== 'undefined' ? currentUser : null;
+const shouldShowProfilePopover = Boolean(user && typeof showProfilePopover !== 'undefined' && showProfilePopover);
+const profileButtonHref = shouldShowProfilePopover && typeof profilePopoverClosePath !== 'undefined' ? profilePopoverClosePath : '/login';
+%>
+
 <header class="site-header">
     <a class="brand" href="/home" aria-label="ARCA home">
         <span class="brand-mark material-symbols-outlined" aria-hidden="true">pets</span>
@@ -23,9 +29,31 @@
     </nav>
 
     <div class="header-tools" aria-label="Ferramentas do usuário">
-        <a class="icon-button" href="/login" aria-label="Entrar">
-            <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
-        </a>
+        <div class="profile-menu">
+            <a
+                class="icon-button profile-button <%= shouldShowProfilePopover ? 'is-open' : '' %>"
+                href="<%= profileButtonHref %>"
+                aria-label="<%= user ? 'Perfil do usuário' : 'Entrar' %>"
+                aria-haspopup="<%= user ? 'dialog' : 'false' %>"
+                aria-expanded="<%= shouldShowProfilePopover ? 'true' : 'false' %>"
+            >
+                <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
+            </a>
+
+            <% if (shouldShowProfilePopover) { %>
+                <div class="profile-popover" role="dialog" aria-label="Informações do usuário">
+                    <strong><%= user.username %></strong>
+                    <span>Perfil: <%= user.label %></span>
+                    <small>Tipo: <%= user.role %></small>
+                    <form class="profile-logout-form" action="/logout" method="post">
+                        <button class="profile-logout-button" type="submit">
+                            <span class="material-symbols-outlined" aria-hidden="true">logout</span>
+                            Sair
+                        </button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
         <a class="icon-button" href="/notificacoes" aria-label="Notificações">
             <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
         </a>

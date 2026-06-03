@@ -1,0 +1,41 @@
+<%
+const page = typeof decorationPage !== 'undefined' ? decorationPage : 'default';
+const sets = {
+    home: [
+        { src: '/assets/svg/decor/leaves/bushes/leaf-bush-corner-left-wide-lg-01.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-left: -46px; --decor-bottom: -22px; --decor-size: 250px;' },
+        { src: '/assets/svg/decor/leaves/bushes/leaf-bush-corner-right-wide-lg-01.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-right: -42px; --decor-bottom: -22px; --decor-size: 260px;' },
+        { src: '/assets/svg/decor/leaves/branches/leaf-branch-long-vertical-md-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-left: -18px; --decor-top: 250px; --decor-size: 185px;' },
+        { src: '/assets/svg/decor/leaves/branches/leaf-branch-long-vertical-md-02.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-right: -16px; --decor-top: 230px; --decor-size: 190px;' },
+        { src: '/assets/svg/decor/leaves/flowers/leaf-flower-bush-peach-lg-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-left: 28px; --decor-bottom: 170px; --decor-size: 132px;' },
+        { src: '/assets/svg/decor/leaves/flowers/leaf-flower-bush-peach-md-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-right: 30px; --decor-bottom: 178px; --decor-size: 124px;' },
+    ],
+    login: [
+        { src: '/assets/svg/decor/leaves/branches/leaf-branch-wide-large-left-md-01.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-left: -34px; --decor-bottom: 24px; --decor-size: 230px;' },
+        { src: '/assets/svg/decor/leaves/branches/leaf-branch-wide-large-right-md-01.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-right: -36px; --decor-bottom: 34px; --decor-size: 230px;' },
+        { src: '/assets/svg/cats/pet-cat-gray-white-sleeping-md-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-left: 70px; --decor-bottom: 52px; --decor-size: 155px;' },
+        { src: '/assets/svg/dogs/pet-dog-golden-puppy-standing-sm-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-right: 82px; --decor-bottom: 60px; --decor-size: 128px;' },
+    ],
+    cadastro: [
+        { src: '/assets/svg/decor/leaves/bushes/leaf-bush-corner-left-wide-lg-01.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-left: -48px; --decor-bottom: -18px; --decor-size: 260px;' },
+        { src: '/assets/svg/decor/leaves/bushes/leaf-bush-corner-right-wide-lg-01.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-right: -44px; --decor-bottom: -18px; --decor-size: 260px;' },
+        { src: '/assets/svg/dogs/pet-dog-golden-puppy-standing-sm-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-right: 28px; --decor-bottom: 92px; --decor-size: 158px;' },
+        { src: '/assets/svg/cats/pet-cat-cream-kitten-sitting-sm-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-left: 64px; --decor-bottom: 94px; --decor-size: 132px;' },
+    ],
+    animal: [
+        { src: '/assets/svg/decor/leaves/branches/leaf-branch-long-vertical-md-03.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-left: -20px; --decor-top: 210px; --decor-size: 190px;' },
+        { src: '/assets/svg/decor/leaves/branches/leaf-branch-long-vertical-md-02.svg', classes: 'decor-page-item decor-side decor-lg', style: '--decor-right: -18px; --decor-top: 210px; --decor-size: 190px;' },
+        { src: '/assets/svg/food/pet-food-bowl-kibble-peach-paw-md-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-left: 82px; --decor-bottom: 108px; --decor-size: 100px;' },
+        { src: '/assets/svg/toys/pet-toy-ball-paw-print-cream-peach-md-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-right: 92px; --decor-bottom: 116px; --decor-size: 92px; --decor-rotate: 10deg;' },
+        { src: '/assets/svg/equipment/pet-carrier-plastic-beige-green-md-01.svg', classes: 'decor-page-item decor-side decor-xl', style: '--decor-right: 34px; --decor-bottom: 42px; --decor-size: 136px;' },
+    ],
+};
+const items = sets[page] || [];
+%>
+
+<% if (items.length) { %>
+    <div class="decor-page-layer decor-page-layer-<%= page %>" aria-hidden="true">
+        <% items.forEach((item) => { %>
+            <img class="<%= item.classes %>" src="<%= item.src %>" alt="" loading="lazy" style="<%- item.style %>">
+        <% }) %>
+    </div>
+<% } %>
