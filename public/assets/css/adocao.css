@@ -1,0 +1,295 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.home-page {
+    padding: 20px 22px 64px;
+}
+#pagina {
+    width: 964px;
+    margin: auto;
+    padding: 24px;
+}
+#voltar{
+    font-size: 24px;
+    color: var(--c1-700);
+    margin-bottom: -49px;
+    text-decoration: none;
+}
+
+.topo-adocao {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 32px;
+    margin-bottom: 24px;
+    min-height: 140px;
+}
+
+.info-adocao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#adocao {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+#adocao + p {
+    margin-top: 0;
+}
+#fundo{
+    display: flex;
+    margin: auto;
+    background-color: #FCF9F2;
+    flex-direction: column;
+    border-radius: 24px;
+    width: 964px;
+    padding: 24px;
+    gap: 16px;
+}
+#fundo-pdpa{
+    color: var(--c1-700);
+    font-size: 24px;
+}
+#grid-animais {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.animal {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    flex-direction: row;
+    border-radius: 24px;
+    margin: 10px;
+    gap: 12px;
+}
+
+.animal-img {
+    width: 187px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.animal-resto {
+    display: flex;
+    flex-direction: column;
+}
+
+.animal h4 {
+    color: var(--c1-700);
+    margin: 0 0 8px 0;
+}
+
+.porte {
+    background-color: #D1F3CD;
+    width: 128px;
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--c1-700);
+}
+
+.saibamais {
+    color: #ffffff;
+    font-size: 16px;
+    background-color: var(--c2-500);
+    border-radius: 12px;
+    width: 100%;
+    height: 37px;
+    border: 0;
+    cursor: pointer;
+    margin-top: auto;
+    transition: 0.67s;
+}
+
+.saibamais:hover {
+    background-color: var(--c2-600);
+    letter-spacing: 1.5px;
+    transition: 0.67s;
+}
+
+.acoes {
+    display: flex;
+    gap: 12px;
+    min-width: 320px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.acoes input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid var(--c1-200);
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 0.3s;
+    background-color: #ffffff;
+    color: var(--c0-800);
+}
+
+.acoes input:focus {
+    outline: none;
+    border-color: var(--c1-700);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--c1-500) 15%, transparent);
+}
+
+.acoes input::placeholder {
+    color: var(--c0-400);
+}
+
+.acoes button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--c1-600), var(--c1-700));
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--c1-700) 25%, transparent);
+}
+
+.acoes button:hover {
+    background: linear-gradient(135deg, var(--c1-700), var(--c1-800));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--c1-800) 30%, transparent);
+}
+
+
+@media (max-width: 768px) {
+    #pagina {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .topo-adocao {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .acoes {
+        min-width: auto;
+        flex-direction: row;
+        align-self: auto;
+    }
+
+    #adocao {
+        font-size: 48px;
+    }
+
+    #fundo {
+        width: 100%;
+    }
+
+    #grid-animais {
+        grid-template-columns: 1fr;
+    }
+
+    .animal {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .animal-img {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-page {
+        padding: 10px 12px 40px;
+    }
+
+    #voltar {
+        font-size: 18px;
+        margin-bottom: -30px;
+    }
+
+    #pagina {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .topo-adocao {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        min-height: 20px;
+    }
+
+    .acoes {
+        min-width: auto;
+        flex-direction: column;
+        gap: 8px;
+        align-self: auto;
+    }
+
+    .acoes input {
+        width: 100%;
+    }
+
+    .acoes button {
+        width: 100%;
+    }
+
+    #adocao {
+        font-size: 36px;
+        margin-bottom: -10px;
+    }
+
+    #fundo {
+        width: 100%;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    #fundo-pdpa {
+        font-size: 18px;
+    }
+
+    #grid-animais {
+        gap: 12px;
+    }
+
+    .animal {
+        flex-direction: column;
+        padding: 12px;
+        margin: 5px;
+        gap: 8px;
+    }
+
+    .animal-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .animal h4 {
+        margin: 0 0 6px 0;
+        font-size: 16px;
+    }
+
+    .porte {
+        width: auto;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+    .saibamais {
+        height: 32px;
+        font-size: 14px;
+    }
+}
+

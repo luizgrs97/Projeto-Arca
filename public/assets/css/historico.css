@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff6e8, #ffeaf1);
+  color: #3e3e3e;
+  overflow-x: hidden;
+}
+.home-page {
+    padding: 20px 22px 64px;
+}
+
+body::before {
+  position: fixed;
+  font-size: 160px;
+  color: rgba(104, 170, 69, 0.08);
+  left: -30px;
+  bottom: 30px;
+}
+
+body::after {
+  position: fixed;
+  font-size: 130px;
+  color: rgba(229, 118, 157, 0.12);
+  right: 20px;
+  bottom: 40px;
+}
+
+main {
+  width: 82%;
+  max-width: 980px;
+  margin: 18px auto;
+}
+
+.voltar {
+  color: #5f9f42;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0 14px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #2f2f2f;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.acoes input {
+  width: 180px;
+  height: 32px;
+  border: none;
+  border-radius: 12px;
+  padding: 0 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.acoes button {
+  border: none;
+  background: #63b246;
+  color: white;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.historico {
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.historico h2 {
+  font-size: 18px;
+  color: #498735;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  position: relative;
+  min-height: 140px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.icone {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.card span {
+  font-size: 12px;
+  color: #777;
+}
+
+.card button {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  border: none;
+  background: #e95b97;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.card button:hover,
+.acoes button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 750px) {
+  main {
+    width: 92%;
+  }
+
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+/* Media Queries - Mobile (480px) */
+@media (max-width: 480px) {
+  .home-page {
+    padding: 10px 12px 40px;
+  }
+
+  main {
+    width: 100%;
+    margin: 12px auto;
+  }
+
+  .voltar {
+    font-size: 12px;
+  }
+
+  .topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .acoes input {
+    width: 100%;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .acoes button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .historico {
+    border-radius: 16px;
+    padding: 14px;
+  }
+
+  .historico h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    padding: 12px;
+    min-height: 120px;
+  }
+
+  .icone {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+  .card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .card span {
+    font-size: 11px;
+  }
+
+  .card button {
+    padding: 6px 12px;
+    font-size: 11px;
+    right: 10px;
+    bottom: 10px;
+  }
+}

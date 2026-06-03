@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<%- include('partials/head', { title: 'ARCA' }) %>
+    <link rel="stylesheet" href="/assets/css/historico.css">
+</head>
+<body class="home-page">
+
+  <%- include('partials/header') %>
+
+  <main>
+    <a class="voltar" href="/home">← Voltar</a>
+
+    <section class="topo">
+      <h1>Histórico</h1>
+
+      <div class="acoes">
+        <input type="text" placeholder="Buscar...">
+        <button>Filtrar</button>
+      </div>
+    </section>
+
+    <section class="historico">
+      <h2>📋 Histórico de atividades</h2>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icone">❌</div>
+          <div>
+            <h3>Adoção–Rex</h3>
+            <p>Status: Concluído</p>
+            <span>Data: 10/05/2025</span>
+          </div>
+          <button>Ver Detalhes</button>
+        </div>
+
+        <div class="card">
+          <div class="icone">↩️</div>
+          <div>
+            <h3>Denúncia – Maus Tratos</h3>
+            <p>Status: Em andamento</p>
+            <span>Data: 05/05/2025</span>
+          </div>
+          <button>Ver Detalhes</button>
+        </div>
+
+        <div class="card">
+          <div class="icone">🐾</div>
+          <div>
+            <h3>Resgate – Cachorro Ferido</h3>
+            <p>Status: Em andamento</p>
+            <span>Data: 07/05/2025</span>
+          </div>
+          <button>Ver Detalhes</button>
+        </div>
+
+        <div class="card">
+          <div class="icone">✅</div>
+          <div>
+            <h3>Castração – Gato Tom</h3>
+            <p>Status: Realizado</p>
+            <span>Data: 01/05/2025</span>
+          </div>
+          <button>Ver Detalhes</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

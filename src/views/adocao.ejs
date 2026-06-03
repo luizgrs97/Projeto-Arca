@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('partials/head', { title: 'ARCA' }) %>
+        <link rel="stylesheet" href="/assets/css/adocao.css">
+</head>
+
+<body class="home-page">
+    <%- include('partials/header') %>
+        <div id=pagina>
+            <p id="voltar"><a href="/home" id="voltar">&larr; Voltar</a></p>
+            <div class="topo-adocao">
+                <div class="info-adocao">
+                    <h1 id="adocao">Adoção</h1>
+                    <p>encontre cães e gatos disponíveis para adoção e mude uma vida.</p>
+                </div>
+                <div class="acoes">
+                    <input type="text" placeholder="Buscar...">
+                    <button>Filtrar</button>
+                </div>
+            </div>
+            <div id="fundo">
+                <strong>
+                    <p id="fundo-pdpa"><span class="material-symbols-outlined">pets</span>Pets disponíveis para adoção
+                    </p>
+                </strong>
+                <div id="grid-animais">
+                    <div class="animal">
+                        <img class="animal-img" src="/assets/images/zeus.png" alt="Zeus">
+                        <div class="animal-resto">
+                            <h4>Zeus</h4>
+                            <strong>
+                                <p class="porte">Porte: Médio</p>
+                            </strong>
+                            <p>Zeus é um cão de 4 anos, muito dócil e brincalhão...</p>
+                            <button class="saibamais">Saiba mais ›</button>
+                        </div>
+                    </div>
+                    <div class="animal">
+                        <img class="animal-img" src="/assets/images/sintia.png" alt="Sintia">
+                        <div class="animal-resto">
+                            <h4>Sintia</h4>
+                            <strong>
+                                <p class="porte">Porte: Médio</p>
+                            </strong>
+                            <p>Sintia é uma cadela muito carinhosa e tranquila...</p>
+                            <button class="saibamais">Saiba mais ›</button>
+                        </div>
+                    </div>
+                    <div class="animal">
+                        <img class="animal-img" src="/assets/images/belinha.png" alt="Belinha">
+                        <div class="animal-resto">
+                            <h4>Belinha</h4>
+                            <strong>
+                                <p class="porte">Porte: Grande</p>
+                            </strong>
+                            <p>Belinha é uma cadela muito dócil e companheira...</p>
+                            <button class="saibamais">Saiba mais ›</button>
+                        </div>
+                    </div>
+                    <div class="animal">
+                        <img class="animal-img" src="/assets/images/bob.png" alt="Bob">
+                        <div class="animal-resto">
+                            <h4>Bob</h4>
+                            <strong>
+                                <p class="porte">Porte: Pequeno</p>
+                            </strong>
+                            <p>Bob é um cãozinho muito carinhoso e dócil...</p>
+                            <button class="saibamais">Saiba mais ›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

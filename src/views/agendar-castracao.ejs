@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('partials/head', { title: 'ARCA' }) %>
+    <link rel="stylesheet" href="/assets/css/agendar-castracao.css">
+</head>
+
+<body class="home-page">
+    <%- include('partials/header') %>
+    <div id="pagina">
+        <a class="voltar" href="#" id="voltar">&larr; Voltar</a>
+        <h1>Agendar Castração</h1>
+        <div id="layout">
+
+            <div id="col-esquerda">
+
+                <div class="card">
+                    <label for="">
+                        <p class="card-titulo"><span class="material-symbols-outlined">location_on</span> Local</p>
+                        <select name="Local" onchange="atualizarResumo('local', this.value)">
+                            <option value="">Selecione o local</option>
+                            <option value="Jacaraipe">ex:Jacaraipe</option>
+                            <option value="Paque de manguinhos">ex:Parque de Manguinhos</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="card">
+
+                    <label for="">
+                        <p class="card-titulo"><span class="material-symbols-outlined">calendar_today</span> Data</p>
+                        <select onchange="atualizarResumo('data', this.value)">
+                            <option>Selecione a data</option>
+                            <option value="05/05/2026">ex:05/05/2026</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="card">
+                    <p class="card-titulo"><span class="material-symbols-outlined">pets</span> Selecione o animal</p>
+                    <div id="animais-grid">
+                            <label class="animal-card">
+                                <input onchange="atualizarResumo('animal', this.value)" type="radio" name="animal" value="Max" >
+                                <img src="/assets/images/max.png" alt="Max">
+                                <p>Max</p>
+                                <span class="porte">Porte: Médio</span>
+                            </label>
+                        <label class="animal-card">
+                            <input onchange="atualizarResumo('animal', this.value)" type="radio" name="animal" value="Frajola">
+                            <img src="/assets/images/frajola.png" alt="Frajola">
+                            <p>Frajola</p>
+                            <span class="porte">Porte: Pequeno</span>
+                        </label>
+                    </div>
+                    <a href="/cadastrar-animal"><button class="cadastrar"><span class="material-symbols-outlined">add_circle</span> Cadastrar outro animal</button></a>
+                </div>
+
+            </div>
+
+            <div class="card" id="resumo">
+                <p class="card-titulo"><span class="material-symbols-outlined">event_available</span> Resumo do agendamento</p>
+                <div class="resumo-item"><strong>Local</strong><span id="resumo-local">Nenhum local selecionado</span>
+                </div>
+                <div class="resumo-item"><strong>Data</strong><span id="resumo-data"> Nenhuma data selecionada</span>
+                </div>
+                <div class="resumo-item"><strong>Animal</strong><span id="resumo-animal">Nenhum animal selecionado</span></div>
+                <p class="info-box">Confira os dados ao lado antes de confirmar.</p>
+            </div>
+        </div>
+        <button onclick="confirmarAgendamento()" id="btn-confirmar" type="submit"><span class="material-symbols-outlined">Calendar_Month</span> CONFIRMAR AGENDAMENTO</button>
+    </div>
+    <script src="/assets/js/agendar-castracao.js"></script>
+</body>
+</html>
